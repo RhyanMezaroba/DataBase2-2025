@@ -1,7 +1,20 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\428214\\Desktop\\Banco de Dados - II\\Aula01 - Revis\u00E3o\\EF-Teste\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula01 - Revis\u00E3o\\EF-Teste\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{99877647-126F-4823-9E17-EE256922F19C}|EF-Teste\\EF-Teste.csproj|c:\\users\\428214\\desktop\\database2-2025\\aula01 - revis\u00E3o\\ef-teste\\ef-teste\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{99877647-126F-4823-9E17-EE256922F19C}|EF-Teste\\EF-Teste.csproj|solutionrelative:ef-teste\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99877647-126F-4823-9E17-EE256922F19C}|EF-Teste\\EF-Teste.csproj|c:\\users\\428214\\desktop\\database2-2025\\aula01 - revis\u00E3o\\ef-teste\\ef-teste\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99877647-126F-4823-9E17-EE256922F19C}|EF-Teste\\EF-Teste.csproj|solutionrelative:ef-teste\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99877647-126F-4823-9E17-EE256922F19C}|EF-Teste\\EF-Teste.csproj|c:\\users\\428214\\desktop\\database2-2025\\aula01 - revis\u00E3o\\ef-teste\\ef-teste\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99877647-126F-4823-9E17-EE256922F19C}|EF-Teste\\EF-Teste.csproj|solutionrelative:ef-teste\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula01 - Revis\u00E3o\\EF-Teste\\EF-Teste\\appsettings.json",
+              "RelativeDocumentMoniker": "EF-Teste\\appsettings.json",
+              "ToolTip": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula01 - Revis\u00E3o\\EF-Teste\\EF-Teste\\appsettings.json",
+              "RelativeToolTip": "EF-Teste\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-11T22:18:30.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula01 - Revis\u00E3o\\EF-Teste\\EF-Teste\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "EF-Teste\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula01 - Revis\u00E3o\\EF-Teste\\EF-Teste\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "EF-Teste\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T22:18:15.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula01 - Revis\u00E3o\\EF-Teste\\EF-Teste\\Program.cs",
+              "RelativeDocumentMoniker": "EF-Teste\\Program.cs",
+              "ToolTip": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula01 - Revis\u00E3o\\EF-Teste\\EF-Teste\\Program.cs",
+              "RelativeToolTip": "EF-Teste\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-11T22:18:06.867Z"
             }
           ]
         }
