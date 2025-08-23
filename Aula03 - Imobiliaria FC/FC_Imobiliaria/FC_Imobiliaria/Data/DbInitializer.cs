@@ -27,5 +27,22 @@ public static class DbInitializer
         }
 
         context.SaveChanges();
+
+        var inquilinos = new Inquilino[]
+        {
+            new Inquilino { Name = "Ricardinho Rei Delas", Idade = 24, QuantImoveis = 2},
+            new Inquilino { Name = "Thiaguinho Do Pila", Idade = 25, QuantImoveis = 4},
+            new Inquilino { Name = "Matheus Estudioso", Idade = 22, QuantImoveis = 1},
+            new Inquilino { Name = "Rhyan Reymond", Idade = 68, QuantImoveis = 5},
+            new Inquilino { Name = "Thiagão Agricultor", Idade = 33, QuantImoveis = 2}
+        };
+
+        foreach (Inquilino inquilino in inquilinos)
+        {
+            context.Inquilinos.Add(inquilino);
+        }
+
+        context.SaveChanges();
+
     }
 }

@@ -1,8 +1,38 @@
-﻿@{
+﻿@model ICollection<FC_Imobiliaria.Models.Imoveis>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">@Model.Count imoveis</h1>
+
+    <table>
+        <tr>
+            <table class="table table-responsive table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Definição</th>
+                        <th>Número de Quartos</th>
+                        <th>Preco</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var i in Model)
+                    {
+                        <tr>
+                            <td>@i.ID</td>
+                            <td>@i.Nome</td>
+                            <td>@i.Definicao</td>
+                            <td>@i.NumeroQuartos</td>
+                            <td>@i.Preco.ToString("C")</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </tr>
+    </table>
 </div>
