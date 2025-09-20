@@ -1,26 +1,23 @@
-using System.Diagnostics;
-using EF_Teste.Data;
-using EF_Teste.Models;
+Ôªøusing EF_Teste.Models;
 using EF_Teste.Repository;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace EF_Teste.Controllers
 {
-    public class HomeController : Controller
+    public class CourseController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly IStudentRepository _studentRepository;
+        private readonly ICourseRepository _courseRepository;
 
-        public HomeController(ILogger<HomeController> logger, IStudentRepository studentRepository)
+        public CourseController(ICourseRepository courseRepository)
         {
-            _logger = logger;
-            _studentRepository = studentRepository;
+            this._courseRepository = courseRepository;
         }
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View(await _studentRepository.GetAll());
+            return View(await _courseRepository.GetAll());
         }
 
         [HttpGet]
@@ -30,81 +27,81 @@ namespace EF_Teste.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Student student)
+        public async Task<IActionResult> Create(Course Course)
         {
             if (ModelState.IsValid)
             {
-                await _studentRepository.Create(student);
+                await _courseRepository.Create(Course);
                 return RedirectToAction("Index");
             }
-            return View(student);
+            return View(Course);
         }
 
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
-            var student = await _studentRepository.GetById(id);
-            if (student == null)
+            var Course = await _courseRepository.GetById(id);
+            if (Course == null)
             {
                 return NotFound();
             }
 
-            await _studentRepository.Delete(student);
+            await _courseRepository.Delete(Course);
             return RedirectToAction("Index");
         }
 
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
-            if (!id.HasValue) // Corrigido: agora sÛ d· erro se o ID estiver ausente
+            if (!id.HasValue) // Corrigido: agora s√≥ d√° erro se o ID estiver ausente
                 return BadRequest();
 
-            var student = await _studentRepository.GetById(id.Value);
+            var Course = await _courseRepository.GetById(id.Value);
 
-            if (student == null)
+            if (Course == null)
                 return NotFound();
 
-            return View(student);
+            return View(Course);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int? id, Student student)
+        public async Task<IActionResult> Edit(int? id, Course Course)
         {
             if (!id.HasValue) // Corrigido
                 return BadRequest();
 
-            if (id.Value != student.ID)
+            if (id.Value != Course.ID)
                 return BadRequest();
 
             if (ModelState.IsValid)
             {
-                await _studentRepository.Update(student);
+                await _courseRepository.Update(Course);
                 return RedirectToAction("Index");
             }
 
-            return View(student);
+            return View(Course);
         }
 
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
-            var student = await _studentRepository.GetById(id);
-            if (student == null)
+            var Course = await _courseRepository.GetById(id);
+            if (Course == null)
             {
                 return NotFound();
             }
-            return View(student);
+            return View(Course);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Update(Student student)
+        public async Task<IActionResult> Update(Course Course)
         {
             if (ModelState.IsValid)
             {
-                await _studentRepository.Update(student);
+                await _courseRepository.Update(Course);
                 return RedirectToAction("Index");
             }
-            return View(student);
+            return View(Course);
         }
 
         public IActionResult Privacy()

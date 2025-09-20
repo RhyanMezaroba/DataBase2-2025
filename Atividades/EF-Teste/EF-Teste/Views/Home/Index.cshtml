@@ -19,6 +19,7 @@
                     <th>Data Matrícula</th>
                     <th>Excluir</th>
                     <th>Atualizar</th>
+                    <th>Editar</th>
                 </tr>
             </thead>
             <tbody>
@@ -41,6 +42,10 @@
 
                             <td>
                                 <a asp-controller="Home" asp-action="Update" asp-route-id="@s.ID" class="btn btn-warning btn-sm">Atualizar</a>
+                            </td>
+
+                            <td>
+                                <a asp-controller="Home" asp-action="Edit" asp-route-id="@s.ID" class="btn btn-primary">Editar</a>
                             </td>
                     </tr>
                 }
