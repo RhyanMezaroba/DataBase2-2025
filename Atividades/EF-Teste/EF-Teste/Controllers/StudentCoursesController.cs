@@ -1,5 +1,6 @@
 ﻿using EF_Teste.Repository;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace EF_Teste.Controllers
 {
@@ -16,8 +17,9 @@ namespace EF_Teste.Controllers
             _studentCoursesRepository = studentCoursesRepository;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var data = await _studentCoursesRepository.GetAll();
             return View();
         }
     }
