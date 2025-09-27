@@ -1,8 +1,9 @@
 ﻿using EF_Teste.Data;
 using EF_Teste.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
-using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace EF_Teste.Repository
 {
@@ -12,77 +13,78 @@ namespace EF_Teste.Repository
 
         public StudentCoursesRepository(SchoolContext schoolContext)
         {
-            this._schoolContext = schoolContext;
+            _schoolContext = schoolContext;
         }
 
         public async Task Create(StudentCourses studentCourses)
         {
-            await _schoolContext.SaveChangesAsync();
             await _schoolContext.StudentCourses.AddAsync(studentCourses);
+            await _schoolContext.SaveChangesAsync();
         }
 
         public async Task Delete(StudentCourses studentCourses)
         {
-            _schoolContext.Remove(studentCourses);
+            _schoolContext.StudentCourses.Remove(studentCourses);
             await _schoolContext.SaveChangesAsync();
         }
 
         public async Task<List<StudentCourses>> Get(int studentId, int courseId)
         {
-            var data = await _schoolContext.StudentCourses
+            var result = await _schoolContext.StudentCourses
                 .Include(x => x.Course)
                 .Include(x => x.Student)
-                .Include(w => w.StudentID == studentId && w.CourseID == courseId)
-                .FirstOrDefaultAsync();
+                .Where(sc => sc.StudentID == studentId && sc.CourseID == courseId)
+                .ToListAsync();
 
-            return data;
+            return result;
         }
 
         public async Task<List<StudentCourses>> GetAll()
         {
-            var data = await _schoolContext.StudentCourses
+            return await _schoolContext.StudentCourses
                 .Include(x => x.Course)
                 .Include(x => x.Student)
                 .ToListAsync();
-
-            return data;
         }
 
         public async Task<List<StudentCourses>> GetByCourseId(string name)
         {
-            var data = await _schoolContext.StudentCourses
+            // Supondo que "name" é parte do nome do curso
+            return await _schoolContext.StudentCourses
                 .Include(x => x.Course)
                 .Include(x => x.Student)
                 .Where(w => w.Course!.Name!.ToLower().Contains(name.ToLower()))
                 .ToListAsync();
-
-            return data;
         }
 
         public async Task<List<StudentCourses>> GetByCourseName(string name)
         {
-            var data = await _schoolContext.StudentCourses
+            // Mesmo comportamento de GetByCourseId - pode ser unificado
+            return await GetByCourseId(name);
+        }
+
+        public async Task<List<StudentCourses>> GetByStudentCoursesId(int studentId)
+        {
+            return await _schoolContext.StudentCourses
                 .Include(x => x.Course)
                 .Include(x => x.Student)
-                .Where(w => w.Course!.Name!.ToLower().Contains(name.ToLower()))
+                .Where(sc => sc.StudentID == studentId)
                 .ToListAsync();
-
-            return data;
         }
 
-        public Task<StudentCourses> GetByStudentCoursesId(int studentId)
+        public async Task<List<StudentCourses>> GetByStudentName(string name)
         {
-            throw new NotImplementedException();
+            return await _schoolContext.StudentCourses
+                .Include(x => x.Course)
+                .Include(x => x.Student)
+                .Where(w => w.Student!.LastName!.ToLower().Contains(name.ToLower()))
+                .ToListAsync();
         }
 
-        public Task<List<StudentCourses>> GetByStudentName(string name)
+        public async Task Update(StudentCourses studentCourses)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task Update(StudentCourses studentCourses)
-        {
-            throw new NotImplementedException();
+            _schoolContext.StudentCourses.Update(studentCourses);
+            await _schoolContext.SaveChangesAsync();
         }
     }
 }

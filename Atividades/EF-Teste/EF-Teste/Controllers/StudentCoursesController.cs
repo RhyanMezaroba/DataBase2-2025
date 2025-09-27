@@ -1,4 +1,5 @@
 ﻿using EF_Teste.Repository;
+using EF_Teste.ViewModels.StudentCourses;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -19,8 +20,43 @@ namespace EF_Teste.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var data = await _studentCoursesRepository.GetAll();
-            return View();
+            var data = await _studentRepository.GetAll();
+            return View(data); 
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            var viewModel = new StudentCoursesViewModel();
+            viewModel.Students = await _studentRepository.GetAllNotEnrolled();
+            viewModel.SetCourses(await _courseRepository.GetAll());
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(StudentCoursesViewModel viewModel)
+        {
+            if(!ModelState.IsValid)
+            {
+                foreach(var c in viewModel.Courses)
+                {
+                    if(c.isSelected)
+                    {
+                        await _studentCoursesRepository.Create(
+                            new Models.StudentCourses
+                            {
+                                StudentID = viewModel.StudentId!,
+                                CourseID = c.Id!,
+                                SignDate = DateTime.Now,
+                            }
+                        );
+                    }
+                }
+
+                return RedirectToAction("Index");
+            }
+
+            return View(viewModel);
         }
     }
 }
