@@ -1,37 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Atividades\\EF-Teste\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D6CE1CFF-0D00-4A53-A532-E33B7DE3552F}|EF-Teste\\EF-Teste.csproj|c:\\users\\428214\\desktop\\database2-2025\\atividades\\ef-teste\\ef-teste\\views\\studentcourses\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D6CE1CFF-0D00-4A53-A532-E33B7DE3552F}|EF-Teste\\EF-Teste.csproj|solutionrelative:ef-teste\\views\\studentcourses\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Atividades\\EF-Teste\\EF-Teste\\Views\\StudentCourses\\Index.cshtml",
-              "RelativeDocumentMoniker": "EF-Teste\\Views\\StudentCourses\\Index.cshtml",
-              "ToolTip": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Atividades\\EF-Teste\\EF-Teste\\Views\\StudentCourses\\Index.cshtml",
-              "RelativeToolTip": "EF-Teste\\Views\\StudentCourses\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-27T00:59:02.091Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
