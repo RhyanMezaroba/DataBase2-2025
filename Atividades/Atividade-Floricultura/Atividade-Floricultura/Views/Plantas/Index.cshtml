@@ -1,0 +1,141 @@
+﻿@model IEnumerable<Atividade_Floricultura.Models.Planta>
+
+@{
+    ViewData["Title"] = "Plantas da GreenHouse";
+}
+
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    h2 {
+        font-weight: 600;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .table thead {
+        background-color: #b7e4c7;
+        color: #2d4739;
+    }
+
+    .table tbody {
+        background-color: #fff0f5;
+    }
+
+        .table tbody tr:hover {
+            background-color: #d8f3dc;
+            transition: background-color 0.3s ease;
+        }
+
+    .table th, .table td {
+        vertical-align: middle;
+        color: #333;
+    }
+
+    .btn-success {
+        background-color: #74c69d;
+        border-color: #74c69d;
+    }
+
+        .btn-success:hover {
+            background-color: #52b788;
+            border-color: #52b788;
+        }
+
+    .btn-warning {
+        background-color: #f0ad4e;
+        border: none;
+        color: #fff;
+    }
+
+        .btn-warning:hover {
+            background-color: #ec9a1d;
+        }
+
+    .btn-info {
+        background-color: #84a9ac;
+        border: none;
+        color: #fff;
+    }
+
+        .btn-info:hover {
+            background-color: #618685;
+        }
+
+    .btn-danger {
+        background-color: #e5989b;
+        border: none;
+        color: white;
+    }
+
+        .btn-danger:hover {
+            background-color: #c65d68;
+        }
+
+    .btn i {
+        margin-right: 4px;
+    }
+
+    .title-gradient {
+        font-weight: 700;
+        font-size: 2rem;
+        background: linear-gradient(to right, #74c69d, #f0b5c3, #cdb4db);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="title-gradient"><i class="bi bi-flower1"></i> Lista das Plantas</h2>
+        <a asp-action="Create" class="btn btn-success shadow-sm">
+            <i class="bi bi-plus-circle"></i> Nova Planta
+        </a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover table-striped align-middle">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Tipo)</th>
+                    <th>@Html.DisplayNameFor(model => model.Nome)</th>
+                    <th>@Html.DisplayNameFor(model => model.ValorSensor)</th>
+                    <th>@Html.DisplayNameFor(model => model.EventoSensor)</th>
+                    <th class="text-center">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Tipo)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ValorSensor)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EventoSensor)</td>
+                        <td class="text-center">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning me-1 shadow-sm">
+                                <i class="bi bi-pencil-square"></i> Editar
+                            </a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info me-1 shadow-sm">
+                                <i class="bi bi-eye"></i> Detalhes
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger shadow-sm">
+                                <i class="bi bi-trash"></i> Excluir
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
