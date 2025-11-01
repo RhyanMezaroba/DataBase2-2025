@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula08 - Projeto\\Aeroporto\\Aeroporto_Final\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4782F839-9BFE-4D0C-84DC-8A8CB8B23405}|Aeroporto_Final\\Aeroporto_Final.csproj|c:\\users\\428214\\desktop\\database2-2025\\aula08 - projeto\\aeroporto\\aeroporto_final\\aeroporto_final\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4782F839-9BFE-4D0C-84DC-8A8CB8B23405}|Aeroporto_Final\\Aeroporto_Final.csproj|solutionrelative:aeroporto_final\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4782F839-9BFE-4D0C-84DC-8A8CB8B23405}|Aeroporto_Final\\Aeroporto_Final.csproj|c:\\users\\428214\\desktop\\database2-2025\\aula08 - projeto\\aeroporto\\aeroporto_final\\aeroporto_final\\controllers\\aeroportocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4782F839-9BFE-4D0C-84DC-8A8CB8B23405}|Aeroporto_Final\\Aeroporto_Final.csproj|solutionrelative:aeroporto_final\\controllers\\aeroportocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4782F839-9BFE-4D0C-84DC-8A8CB8B23405}|Aeroporto_Final\\Aeroporto_Final.csproj|c:\\users\\428214\\desktop\\database2-2025\\aula08 - projeto\\aeroporto\\aeroporto_final\\aeroporto_final\\models\\aeroporto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4782F839-9BFE-4D0C-84DC-8A8CB8B23405}|Aeroporto_Final\\Aeroporto_Final.csproj|solutionrelative:aeroporto_final\\models\\aeroporto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula08 - Projeto\\Aeroporto\\Aeroporto_Final\\Aeroporto_Final\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "Aeroporto_Final\\Data\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula08 - Projeto\\Aeroporto\\Aeroporto_Final\\Aeroporto_Final\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "Aeroporto_Final\\Data\\DbInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T23:20:54.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AeroportoController.cs",
+              "DocumentMoniker": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula08 - Projeto\\Aeroporto\\Aeroporto_Final\\Aeroporto_Final\\Controllers\\AeroportoController.cs",
+              "RelativeDocumentMoniker": "Aeroporto_Final\\Controllers\\AeroportoController.cs",
+              "ToolTip": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula08 - Projeto\\Aeroporto\\Aeroporto_Final\\Aeroporto_Final\\Controllers\\AeroportoController.cs",
+              "RelativeToolTip": "Aeroporto_Final\\Controllers\\AeroportoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T23:17:57.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Aeroporto.cs",
+              "DocumentMoniker": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula08 - Projeto\\Aeroporto\\Aeroporto_Final\\Aeroporto_Final\\Models\\Aeroporto.cs",
+              "RelativeDocumentMoniker": "Aeroporto_Final\\Models\\Aeroporto.cs",
+              "ToolTip": "C:\\Users\\428214\\Desktop\\DataBase2-2025\\Aula08 - Projeto\\Aeroporto\\Aeroporto_Final\\Aeroporto_Final\\Models\\Aeroporto.cs",
+              "RelativeToolTip": "Aeroporto_Final\\Models\\Aeroporto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T23:13:03.699Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
